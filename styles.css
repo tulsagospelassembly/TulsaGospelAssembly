@@ -1,3 +1,106 @@
-div {
-    text-align: center;
+body {
+    font-family: "Prompt", sans-serif;
+    background-color: #ccc;
+    background-size: cover;
+    color: #333;
+}
+
+/* NAV BAR STYLING */
+.nav-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 30% auto;
+    background-color: #333;
+    text-transform: uppercase;
+}
+
+.nav-wrapper a {
+    letter-spacing: .1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.nav-wrapper a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.nav-item {
+    margin-left: 10px;
+    
+    padding: 10px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: .1em;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.nav-wrapper ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+.burger-icon {
+    display: none;
+}
+
+/* MAIN STYLING */
+.main-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "title title"
+        "serviceTimes announcements"
+        "statementOfFaith statementOfChurchOperation";
+}
+
+.wrapper > .header > .title,
+.wrapper > .header > .service-times,
+.wrapper > .header > .announcements,
+.wrapper > .content > .statement-of-faith,
+.wrapper > .content > .statement-of-the-church-operation {
+    padding: 25px;
+}
+
+.title, .service-times, .announcements, .statement-of-faith, .statement-of-the-church-operation {
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
+    background-color: #aaa;
+    display: grid;
+    align-content: flex-end;
+}
+
+.title {
+    grid-area: title;
+}
+
+.service-times {
+    grid-area: serviceTimes;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.statement-of-faith {
+    grid-area: statementOfFaith;
+}
+
+.statement-of-the-church-operation {
+    grid-area: statementOfChurchOperation;
 }
