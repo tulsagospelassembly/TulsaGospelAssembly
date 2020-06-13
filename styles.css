@@ -7,10 +7,9 @@ body {
 
 /* NAV BAR STYLING */
 .nav-wrapper {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 15px 20px;
-    margin-top: 30px;
     display: grid;
     grid-template-columns: 30% auto;
     background-color: #333;
@@ -31,7 +30,6 @@ body {
 
 .nav-item {
     margin-left: 10px;
-    
     padding: 10px;
 }
 
@@ -53,9 +51,16 @@ body {
 }
 
 /* MAIN STYLING */
-.main-wrapper {
+/* .main-wrapper {
     max-width: 1200px;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "title title"
+        "serviceTimes announcements"
+        "statementOfFaith statementOfChurchOperation";
 }
 
 .wrapper {
@@ -70,12 +75,22 @@ body {
         "statementOfFaith statementOfChurchOperation";
 }
 
-.wrapper > .header > .title,
-.wrapper > .header > .service-times,
-.wrapper > .header > .announcements,
-.wrapper > .content > .statement-of-faith,
-.wrapper > .content > .statement-of-the-church-operation {
+.main-wrapper > .header > .title,
+.main-wrapper > .header > .service-times,
+.main-wrapper > .header > .announcements,
+.main-wrapper > .content > .statement-of-faith,
+.main-wrapper > .content > .statement-of-the-church-operation {
     padding: 25px;
+} */
+
+.main-wrapper {
+    display: grid;
+    width: 1800px;
+    margin: auto;
+    grid-template-rows: 750px, 1fr;
+    grid-template-areas: 
+        "title"
+        "contentArea";
 }
 
 .title, .service-times, .announcements, .statement-of-faith, .statement-of-the-church-operation {
@@ -87,6 +102,53 @@ body {
 
 .title {
     grid-area: title;
+    min-height: 750px;
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.1)) border-box, 
+                url(images/churchPic.JPG);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 35%;
+    background-size: cover;
+    display: inline;
+}
+
+.title > h1 {
+    margin-top: 250px;
+    text-align: center;
+    color: #eee;
+    font-size: 70px;
+}
+
+.title > div {
+    text-align: center;
+}
+
+.title > div > button {
+    text-decoration: none;
+    border: none;
+    background-color: #eee;
+    color: black;
+    font-size: 25px;
+    padding: 5px 12px;
+    cursor: pointer;
+    width: min-content;
+}
+
+.title > div > p {
+    color: #eee;
+    display: inline-block;
+    font-size: 35px;
+}
+
+.content {
+    grid-area: contentArea;
+    display: grid;
+    max-width: 1800px;
+    margin: auto;
+    gap: 10px;
+    grid-template-areas: 
+        "serviceTimes announcements"
+        "statementOfFaith statementOfChurchOperation";
 }
 
 .service-times {
@@ -103,4 +165,49 @@ body {
 
 .statement-of-the-church-operation {
     grid-area: statementOfChurchOperation;
+}
+
+/* TABLET MEDIA QUERY*/
+@media screen and (max-width: 950px) {
+    .main-wrapper {
+        grid-template-areas: "title title"
+                             "serviceTimes announcements"
+                             "statementOfFaith statementOfChurchOperation";
+    }
+}
+
+/* MOBILE MEDIA QUERY */
+@media screen and (max-width: 690px) {
+    .main-wrapper {
+        grid-template-areas:
+            "title"
+            "serviceTiems"
+            "announcements"
+            "statementOfFaith"
+            "statementOfChurchOperation";
+    }
+
+    .burger-icon {
+        display: inline-block;
+        justify-self: end;
+        grid-column: 4/5;
+        border: 2px solid #333;
+        color: #333;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+
+    .burger-icon:hover {
+        cursor: pointer;
+    }
+
+
+    .mobile-show {
+        display: block;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
 }
