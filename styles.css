@@ -7,7 +7,7 @@ body {
 
 /* NAV BAR STYLING */
 .nav-wrapper {
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
     padding: 15px 20px;
     display: grid;
@@ -85,9 +85,9 @@ body {
 
 .main-wrapper {
     display: grid;
-    width: 1800px;
+    width: 75vw;
     margin: auto;
-    grid-template-rows: 750px, 1fr;
+    grid-template-rows: auto, 1fr;
     grid-template-areas: 
         "title"
         "contentArea";
@@ -102,7 +102,7 @@ body {
 
 .title {
     grid-area: title;
-    min-height: 750px;
+    min-height: 55vh;
     background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.1)) border-box, 
                 url(images/churchPic.JPG);
     background-repeat: no-repeat;
@@ -113,10 +113,10 @@ body {
 }
 
 .title > h1 {
-    margin-top: 250px;
+    margin-top: 20vh;
     text-align: center;
     color: #eee;
-    font-size: 70px;
+    font-size: 3.5vw;
 }
 
 .title > div {
@@ -128,8 +128,8 @@ body {
     border: none;
     background-color: #eee;
     color: black;
-    font-size: 25px;
-    padding: 5px 12px;
+    font-size: 4vh;
+    padding-top: .5vh;
     cursor: pointer;
     width: min-content;
 }
@@ -137,13 +137,13 @@ body {
 .title > div > p {
     color: #eee;
     display: inline-block;
-    font-size: 35px;
+    font-size: 4vh;
 }
 
 .content {
     grid-area: contentArea;
     display: grid;
-    max-width: 1800px;
+    max-width: 75vw;
     margin: auto;
     gap: 10px;
     grid-template-areas: 
