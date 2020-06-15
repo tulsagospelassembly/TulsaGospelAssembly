@@ -1,6 +1,6 @@
 body {
-    font-family: "Prompt", sans-serif;
-    background-color: #ccc;
+    font-family: sans-serif;
+    background-color: #EEF4ED;
     background-size: cover;
     color: #333;
 }
@@ -9,36 +9,32 @@ body {
 .nav-wrapper {
     width: 100vw;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 15px 0px;
     display: grid;
-    grid-template-columns: 30% auto;
-    background-color: #333;
-    text-transform: uppercase;
+    background-color: #0B2545;
+    position: fixed;
+    text-align: center;
 }
 
 .nav-wrapper a {
     letter-spacing: .1em;
     text-decoration: none;
     font-weight: bold;
-    color: #ccc;
+    color: #EEF4ED;
+    text-transform: uppercase;
 }
 
 .nav-wrapper a:hover {
     cursor: pointer;
-    color: #fff;
+    color: #8DA9C4;
+}
+
+.nav-wrapper a:active {
+    color: #DFDF25;   
 }
 
 .nav-item {
-    margin-left: 10px;
-    padding: 10px;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: .1em;
-    text-decoration: none;
-    color: #ccc;
+    padding: 0px 30px;
 }
 
 .nav-wrapper ul li {
@@ -51,120 +47,168 @@ body {
 }
 
 /* MAIN STYLING */
-/* .main-wrapper {
-    max-width: 1200px;
-    margin: auto;
+.more-to-come {
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    grid-template-areas: 
-        "title title"
-        "serviceTimes announcements"
-        "statementOfFaith statementOfChurchOperation";
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #134074;
+    color: #EEF4ED;
+    font-size: 2em;
+    margin-top: 0;
 }
 
-.wrapper {
-    max-width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    grid-template-areas: 
-        "title title"
-        "serviceTimes announcements"
-        "statementOfFaith statementOfChurchOperation";
+.more-to-come > h1 {
+    font-family: "Satisfy";
+    color: #DFDF25;
+    font-size: 4em;
 }
-
-.main-wrapper > .header > .title,
-.main-wrapper > .header > .service-times,
-.main-wrapper > .header > .announcements,
-.main-wrapper > .content > .statement-of-faith,
-.main-wrapper > .content > .statement-of-the-church-operation {
-    padding: 25px;
-} */
 
 .main-wrapper {
     display: grid;
-    width: 75vw;
+    width: 100vw;
     margin: auto;
-    grid-template-rows: auto, 1fr;
     grid-template-areas: 
-        "title"
-        "contentArea";
-}
-
-.title, .service-times, .announcements, .statement-of-faith, .statement-of-the-church-operation {
-    box-shadow: 0 0 4px rgba(0,0,0,.3);
-    background-color: #aaa;
-    display: grid;
-    align-content: flex-end;
+        "title title"
+        "directions directions"
+        "serviceTimes announcements"
+        "statementOfFaith statementOfChurchOperation";
 }
 
 .title {
     grid-area: title;
-    min-height: 55vh;
+    height: 65vh;
+    min-height: 300px;
     background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.1)) border-box, 
                 url(images/churchPic.JPG);
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 35%;
+    background-position-y: 30%;
     background-size: cover;
-    display: inline;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .title > h1 {
-    margin-top: 20vh;
-    text-align: center;
-    color: #eee;
-    font-size: 3.5vw;
+    font-size: 7em;
+    font-family: "Satisfy", sans-serif;
+    text-shadow: 2px 2px 2px black;
+    color: #EEF4ED;
 }
 
-.title > div {
-    text-align: center;
+.directions {
+    grid-area: directions;
+    height: 12vh;
+    min-height: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
 }
 
-.title > div > button {
-    text-decoration: none;
-    border: none;
-    background-color: #eee;
-    color: black;
-    font-size: 4vh;
-    padding-top: .5vh;
-    cursor: pointer;
-    width: min-content;
-}
-
-.title > div > p {
-    color: #eee;
-    display: inline-block;
-    font-size: 4vh;
-}
-
-.content {
-    grid-area: contentArea;
-    display: grid;
-    max-width: 75vw;
-    margin: auto;
-    gap: 10px;
-    grid-template-areas: 
-        "serviceTimes announcements"
-        "statementOfFaith statementOfChurchOperation";
+.directions > a {
+    margin-right: 2vw;
 }
 
 .service-times {
+    background-color: #0B2545;
     grid-area: serviceTimes;
+    height: 20vh;
+    min-height: 200px;
+    color: #EEF4ED;
+    text-align: center;
 }
 
 .announcements {
+    background-color: #0B2545;
     grid-area: announcements;
+    height: 20vh;
+    min-height: 200px;
+    color: #EEF4ED;
+    text-align: center;
+}
+
+.service-times > h6, .announcements > h6 {
+    color: #DFDF25;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.announcements > h6 {
+    color: #DFDF25;
 }
 
 .statement-of-faith {
     grid-area: statementOfFaith;
+    margin: 5px 30px;
 }
 
-.statement-of-the-church-operation {
+.statement-of-church-operation {
     grid-area: statementOfChurchOperation;
+    margin: 5px 30px;
+}
+
+.content-title {
+    font-weight: bold;
+}
+
+/* Buttons Styling and Animation */
+.btn {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background: #DFDF25;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: -5px 5px 15px 5px #00000070;
+    color: #EEF4ED;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.btn i {
+    line-height: 75px;
+    font-size: 50px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i {
+    transform: scale(1.3);
+    color: #DFDF25;
+}
+   
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #EEF4ED;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before {
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes aaa {
+    0% {
+        left: -110%;
+      top: 90%;
+    } 50% {
+        left: 10%;
+        top: -30%;
+    } 100% {
+        top: -10%;
+        left: -10%;
+    }
 }
 
 /* TABLET MEDIA QUERY*/
