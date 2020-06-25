@@ -319,7 +319,7 @@ body {
     }
 
     .main-wrapper {
-        grid-template-rows: 30vh 30px 250px 30px 250px 30px 250px 30px 300px;
+        grid-template-rows: 50vh 30px 250px 30px 250px 30px 250px 30px 300px;
         grid-template-columns: 1fr 85vw 1fr;
         grid-template-areas:
             "title title title"
