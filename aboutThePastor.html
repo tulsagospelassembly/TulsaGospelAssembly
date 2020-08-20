@@ -35,9 +35,11 @@
             padding-top: 80px;
             display: grid;
             grid-template-columns: 1fr 90vw 1fr;
-            grid-template-rows: 1fr minmax(80px, 320px) 350px;
+            grid-template-rows:  auto 80px auto 80px 350px;
             grid-template-areas:
                 ". aboutThePastor ."
+                ". . ."
+                ". iglersPhoto ."
                 ". . ."
                 "footer footer footer";
         }
@@ -49,12 +51,25 @@
         .about-the-pastor {
             grid-area: aboutThePastor;
         }
+
+        .iglers-photo {
+            grid-area: iglersPhoto;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: auto;
+            box-shadow: -3px 3px 10px 1px var(--medium-background-color);
+            border-radius: 5px;
+        }
     </style>
+
+    
 
     <div class="aboutThePastor-wrapper">
         <div class="card-wrapper about-the-pastor">
             <div class="card-header">
-                <h6>Statement Of Faith</h6>
+                <h6>About The Pastor</h6>
             </div>
             <div class="card-content aboutThePastor-card-content">
                 <p>
@@ -106,6 +121,8 @@
                 </p>
             </div>
         </div>
+
+        <img class="iglers-photo" src="./images/Igler_Photo.jpeg">
 
         <div class="footer">
             <h6>Tulsa Gospel Assembly</h6>
