@@ -1,3 +1,4 @@
+//THIS ACTIVATES/DEACTIVATES THE BURGER MENU FOR MOBILE NAV
 $(document).ready(function() {
 
     $(".burger-icon").click(function(){
@@ -5,14 +6,7 @@ $(document).ready(function() {
         $(".nav-items").toggleClass("active");
     });
 
-    // $(".burger-icon").on("click", function() {
-    //     if ($(".main-nav").hasClass("mobile-hide")) {
-    //         $(".main-nav").removeClass("mobile-hide");
-    //         $(".main-nav").addClass("mobile-show");
-    //     } else {
-    //         $(".main-nav").removeClass("mobile-show");
-    //         $(".main-nav") .addClass("mobile-hide");      
-    //     }
-    // });
+    
 });
 
+//PDF RENDERING
