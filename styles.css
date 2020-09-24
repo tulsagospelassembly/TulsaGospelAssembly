@@ -300,10 +300,6 @@ body {
         font-size: 40px;
     }
 
-    /* .iglers-photo {
-        width: 
-    } */
-
     @keyframes title {
         0% {
             opacity: 0;
@@ -337,21 +333,10 @@ body {
             "footer footer footer";
     }
 
-    /* .mobile-nav {
-        display: block !important;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-    } */
-
     .burger-icon {
         display: grid !important;
         font-size: 1rem;
     }
-
-    /* .nav-wrapper {
-        justify-content: unset;
-    } */
 
     .nav-items {
         position: fixed;
