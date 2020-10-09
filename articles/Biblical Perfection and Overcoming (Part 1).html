@@ -3,14 +3,17 @@
 <head>
 <title>Tulsa Gospel Assembly</title>
 <meta charset="utf-8">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<META name="generator" content="BCL easyConverter SDK 5.0.241">
+<META name="author" content="TGA1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="app.js"></script>
+<script src="../app.js"></script>
 </head>
 
 <body>
@@ -20,59 +23,52 @@
             <i class="burger-icon fas fa-bars"></i>
         <!-- </div> -->
         <div class="nav-items">
-            <a class="nav-item" href="index.html">Home</a>
-            <a class="nav-item" href="aboutUs.html">About Us</a>
-            <a class="nav-item" href="aboutThePastor.html">About the Pastor</a>
-            <a class="nav-item" href="moreToCome.html">Media</a>
-            <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a>
+            <a class="nav-item" href="../index.html">Home</a>
+            <a class="nav-item" href="../aboutUs.html">About Us</a>
+            <a class="nav-item" href="../aboutThePastor.html">About the Pastor</a>
+            <a class="nav-item" href="../moreToCome.html">Media</a>
+            <a class="nav-item" href="../thePastorsStudy.html">The Pastor's Study</a>
         </ul>
     </nav>   
 
     <style>
-        .thePastorsStudy-wrapper {
+        .article-wrapper {
             width: 100%;
+            height: 100%;
             padding-top: 80px;
             display: grid;
-            grid-template-columns: 1fr 500px 1fr;
-            grid-template-rows:auto 140px 350px;
+            grid-template-columns: 1fr 900px 1fr;
+            grid-template-rows:  auto 80px 350px;
             grid-template-areas:
-                ". thePastorsStudy ."
+                ". article ."
                 ". . ."
                 "footer footer footer";
         }
 
-        .the-pastors-study {
-            grid-area: thePastorsStudy;
+        .article {
+            grid-area: article;
         }
 
-        .aboutThePastor-card-content {
-            justify-content: center;
-            align-content: center;
-            display: flex;
-        }
-
-        /* TABLET MEDIA QUERY */
         @media screen and (max-width: 950px) {
-            .thePastorsStudy-wrapper {
+            .article-wrapper {
                 grid-template-columns: 1fr 90vw 1fr;
             }
         }
     </style>
 
-    <div class="thePastorsStudy-wrapper">
-        <div class="the-pastors-study card-wrapper">
+    <div class="article-wrapper">
+        <div class="card-wrapper article">
             <div class="card-header">
-                <h6>The Pastor's Study</h6>
+                <h6>Biblical Perfection and Overcoming (Part 1)</h6>
             </div>
-            <div class="aboutThePastor-card-content card-content">
-                <a class="article-btn" href="articles/Biblical Perfection and Overcoming (Part 1).html"><i class="fas fa-book"></i><p>Biblical Perfection and Overcoming (Part 1)</p></a>
-                <a class="article-btn" href="articles/Biblical Perfection and Overcoming (Part 2).html"><i class="fas fa-book"></i><p>Biblical Perfection and Overcoming (Part 2)</p></a>
+            <div class="card-content article-card-content">
+                <iframe src="Biblical Perfection and Overcoming (Part 1).pdf" width="100%" height="1100px"></iframe>
             </div>
         </div>
 
-        <!-- <div class="footer">
+        <div class="footer">
             <h6>Tulsa Gospel Assembly</h6>
             <p>Feel free to contact us by email at tulsagospelassembly@gmail.com</p>
-        </div> -->
+        </div>
     </div>
 </body> 
