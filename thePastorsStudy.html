@@ -33,7 +33,7 @@
             width: 100%;
             padding-top: 80px;
             display: grid;
-            grid-template-columns: 1fr 900px 1fr;
+            grid-template-columns: 1fr 500px 1fr;
             grid-template-rows:auto 140px 350px;
             grid-template-areas:
                 ". thePastorsStudy ."
@@ -43,6 +43,12 @@
 
         .the-pastors-study {
             grid-area: thePastorsStudy;
+        }
+
+        .aboutThePastor-card-content {
+            justify-content: center;
+            align-content: center;
+            display: flex;
         }
 
         /* TABLET MEDIA QUERY */
@@ -59,13 +65,14 @@
                 <h6>The Pastor's Study</h6>
             </div>
             <div class="aboutThePastor-card-content card-content">
-                <iframe src="articles/Rom_Chapter5_bold.pdf#toolbar=0" width="100%" height="1100px"></iframe>
+                <a class="article-btn" href="articles/for the web, Rom. Chapter 5, bold.html"><i class="fas fa-book"></i><p>Biblical Perfection and Overcoming (Part 1)</p></a>
+                <a class="article-btn" href="articles/for the web.The Pastor's entry 2 perfection.html"><i class="fas fa-book"></i><p>Biblical Perfection and Overcoming (Part 2)</p></a>
             </div>
         </div>
 
-        <div class="footer">
+        <!-- <div class="footer">
             <h6>Tulsa Gospel Assembly</h6>
             <p>Feel free to contact us by email at tulsagospelassembly@gmail.com</p>
-        </div>
+        </div> -->
     </div>
 </body> 
