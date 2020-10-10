@@ -380,10 +380,7 @@ body {
     }
 
     .main-wrapper {
-        /* width: 100%; */
-        /* margin: auto; */
-        /* display: grid; */
-        grid-template-rows: 100vh auto 350px;
+        grid-template-rows: 50vh auto 200px;
         grid-template-columns: 1fr 90vw 1fr;
         grid-template-areas: 
             "title title title"
