@@ -272,7 +272,7 @@ body {
     margin: 10px;
     padding: 20px 10px 0px 10px;
     display: block;
-    width: 170px;
+    width: 160px;
     height: 160px;
     color: var(--light-gray);
     background-color: rgba(0,0,0,0);
@@ -465,5 +465,16 @@ body {
     .footer > h6 {
         font-size: 2rem;
         font-family: "Satisfy", sans-serif;
+    }
+
+    .article-btn {
+        padding: 20px 10px 20px 10px;
+        width: 120px;
+        height: 120px;
+        font-size: .95rem;
+    }
+    
+    .article-btn i {
+        font-size: 45px;
     }
 }

@@ -32,9 +32,9 @@
     <style>
         .thePastorsStudy-wrapper {
             width: 100%;
-            padding-top: 80px;
+            padding-top: 200px;
             display: grid;
-            grid-template-columns: 1fr 500px 1fr;
+            grid-template-columns: 1fr 700px 1fr;
             grid-template-rows:auto 140px 350px;
             grid-template-areas:
                 ". thePastorsStudy ."
@@ -49,13 +49,22 @@
         .aboutThePastor-card-content {
             justify-content: center;
             align-content: center;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
         /* TABLET MEDIA QUERY */
         @media screen and (max-width: 950px) {
             .thePastorsStudy-wrapper {
+                padding-top: 80px;
                 grid-template-columns: 1fr 90vw 1fr;
+            }
+        }
+
+        /* MOBILE MEDIA QUERY */
+        @media screen and (max-width: 690px) {
+            .aboutThePastor-card-content {
+                grid-template-columns: 1fr 1fr;
             }
         }
     </style>
@@ -68,6 +77,7 @@
             <div class="aboutThePastor-card-content card-content">
                 <a class="article-btn" href="articles/Biblical Perfection and Overcoming (Part 1).html"><i class="fas fa-book"></i><p>Biblical Perfection and Overcoming (Part 1)</p></a>
                 <a class="article-btn" href="articles/Biblical Perfection and Overcoming (Part 2).html"><i class="fas fa-book"></i><p>Biblical Perfection and Overcoming (Part 2)</p></a>
+                <a class="article-btn" href="articles/Biblical Perfection and Overcoming (Part 3).html"><i class="fas fa-book"></i><p>Biblical Perfection and Overcoming (Part 3)</p></a>
             </div>
         </div>
 
