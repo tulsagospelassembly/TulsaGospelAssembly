@@ -116,6 +116,15 @@ body {
     font-weight: lighter;
 }
 
+.book-link:link, .book-link:visited {
+    text-decoration: none;
+    color: var(--light-gray);
+}
+
+.book-link:hover, .book-link:active {
+    text-decoration: underline;
+}
+
 
 /* QUAD STYLING */
 .quad-wrapper {
@@ -377,6 +386,7 @@ body {
 
     .title > h1 {
         animation: none !important;
+        font-size: 3rem;
     }
 
     .main-wrapper {
@@ -389,21 +399,22 @@ body {
     }
 
     .quad-wrapper {
-        grid-template-rows: 400px 400px 400px 400px;
+        /* grid-template-rows: auto auto auto auto; */
+        grid-template-rows: 530px 530px 530px 530px;
         grid-template-columns: 1fr;
     }
 
     .quad > i {
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding-top: 60px;
     }
     
     .quad > h6 {
-        font-size: 1.25rem;
+        font-size: 1.8rem;
     }
     
     .quad > p {
-        font-size: .8rem;
+        font-size: 1.1rem;
         padding: 0 40px 0 40px;
     }
 
