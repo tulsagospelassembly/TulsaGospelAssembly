@@ -386,16 +386,21 @@ body {
 
     .title > h1 {
         animation: none !important;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .main-wrapper {
         grid-template-rows: 50vh auto 200px;
-        grid-template-columns: 1fr 90vw 1fr;
+        /* grid-template-columns: 1fr 90vw 1fr;
         grid-template-areas: 
             "title title title"
             ". quad ."
-            "footer footer footer";
+            "footer footer footer"; */
+            grid-template-columns: 100vw;
+            grid-template-areas: 
+                "title"
+                "quad"
+                "footer";
     }
 
     .quad-wrapper {
