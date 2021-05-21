@@ -384,9 +384,11 @@ body {
         animation: none !important;
     }
 
+    .title {
+        width: 1fr;
+    }
     .title > h1 {
         animation: none !important;
-        font-size: 2.5rem;
     }
 
     .main-wrapper {
@@ -404,22 +406,21 @@ body {
     }
 
     .quad-wrapper {
-        /* grid-template-rows: auto auto auto auto; */
-        grid-template-rows: 530px 530px 530px 530px;
+        grid-template-rows: 400px 400px 400px 400px;
         grid-template-columns: 1fr;
     }
 
     .quad > i {
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding-top: 60px;
     }
     
     .quad > h6 {
-        font-size: 1.8rem;
+        font-size: 1.25rem;
     }
     
     .quad > p {
-        font-size: 1.1rem;
+        font-size: .8rem;
         padding: 0 40px 0 40px;
     }
 
