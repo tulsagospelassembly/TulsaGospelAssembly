@@ -394,35 +394,30 @@ body {
 
     .main-wrapper {
         grid-template-rows: 50vh auto 200px;
-        /* grid-template-columns: 1fr 90vw 1fr;
+        grid-template-columns: 1fr 95vw 1fr;
         grid-template-areas: 
             "title title title"
             ". quad ."
-            "footer footer footer"; */
-            grid-template-columns: 100vw;
-            grid-template-areas: 
-                "title"
-                "quad"
-                "footer";
+            "footer footer footer";
     }
 
     .quad-wrapper {
-        grid-template-rows: 400px 400px 400px 400px;
+        grid-template-rows: 500px 500px 500px 500px;
         grid-template-columns: 1fr;
     }
 
     .quad > i {
-        font-size: 2rem;
+        font-size: 2.25rem;
         padding-top: 60px;
     }
     
     .quad > h6 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     
     .quad > p {
         font-size: 1rem;
-        padding: 0 40px 0 40px;
+        padding: 0;
     }
 
     .directions-quad {
