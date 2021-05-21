@@ -389,6 +389,7 @@ body {
     }
     .title > h1 {
         animation: none !important;
+        font-size: 2rem;
     }
 
     .main-wrapper {
@@ -420,7 +421,7 @@ body {
     }
     
     .quad > p {
-        font-size: .8rem;
+        font-size: 1rem;
         padding: 0 40px 0 40px;
     }
 
