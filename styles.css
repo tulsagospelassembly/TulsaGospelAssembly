@@ -1,24 +1,24 @@
 body {
     --white-color: #C5C5C5;
     --black-color: #333;
-    --dark-navy: #171E24;
     --medium-navy: #212b33;
-    --medium-gray: #7A7A7A;
+    --dark-navy: #171E24;
     --light-gray:   #CACACA;
+    --medium-gray: #7A7A7A;
     --dark-gray: #33383D;
 
     /* VARIABLES TO CHANGE COLORS ACROSS ALL COMPONETS OF WEBSITE */
-    --main-background-color: var(--light-gray);
+    --main-background-color: var(--white-color);
     --main-text-color: var(--dark-gray);
     --navbar-background-color: var(--dark-navy);
-    --navbar-text-color: var(--light-gray);
+    --navbar-text-color: var(--white-color);
     --navbar-button-hover-color: var(--medium-navy);
-    --title-text-color: var(--light-gray);
+    --title-text-color: var(--white-color);
     --quad-gradient-color: var(--dark-gray);
     --footer-background-color: var(--dark-navy);
-    --footer-heading-color: var(--light-gray);
-    --footer-text-color: var(--light-gray);
-    --btn-background-color: var(--light-gray);
+    --footer-heading-color: var(--white-color);
+    --footer-text-color: var(--white-color);
+    --btn-background-color: var(--white-color);
     --btn-text-color: var(--dark-navy);
 
     font-family: "Lato", sans-serif;
