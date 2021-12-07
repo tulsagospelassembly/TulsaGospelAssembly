@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tulsa Gospel Assembly</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</head>
+
+<body>
+    <nav class="nav-wrapper">
+            <i class="burger-icon fas fa-bars"></i>
+        <div class="nav-items">
+            <a class="nav-item" href="index.html">Home</a>
+            <a class="nav-item" href="aboutUs.html">About Us</a>
+            <a class="nav-item" href="aboutThePastor.html">About the Pastor</a>
+            <a class="nav-item" href="media.html">Media</a>
+            <!-- <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a> -->
+        </div>
+    </nav>   
+
+    <style>
+        .media-wrapper {
+            display: grid;
+            padding-top: 60px;
+            justify-items: center;
+        }
+
+        .card-wrapper {
+            margin-bottom: 200px;
+            max-width: 1600px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .card-content {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 950px) {
+            .card-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            .card-content {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+
+    <div class="media-wrapper">
+        <div class="card-wrapper">
+            <div class="card-header">
+                <h6>Pie Contest 2021</h6>
+            </div>
+            <div class="card-content">
+                <img src="images/pieContest/pieContest1.jpg">
+                <img src="images/pieContest/pieContest18.jpg">
+                <img src="images/pieContest/pieContest10.jpg">
+                <img src="images/pieContest/pieContest15.jpg">
+                <img src="images/pieContest/pieContest16.jpg">
+                <img src="images/pieContest/pieContest12.jpg">
+                <img src="images/pieContest/pieContest2.jpg">
+                <img src="images/pieContest/pieContest3.jpg">
+                <img src="images/pieContest/pieContest4.jpg">
+                <img src="images/pieContest/pieContest5.jpg">
+                <img src="images/pieContest/pieContest6.jpg">
+                <img src="images/pieContest/pieContest7.jpg">
+                <img src="images/pieContest/pieContest9.jpg">
+                <img src="images/pieContest/pieContest8.jpg">
+                <img src="images/pieContest/pieContest11.jpg">
+                <img src="images/pieContest/pieContest13.jpg">
+                <img src="images/pieContest/pieContest17.jpg">
+                <!-- <p>a;lksdjfal;ksdf</p> -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <h6>Tulsa Gospel Assembly</h6>
+            <p>Feel free to contact us by email at tulsagospelassembly@gmail.com</p>
+        </div>
+    </div>
+</body> 
