@@ -99,26 +99,64 @@ body {
 
 .title {
     grid-area: title;
-    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.1)) border-box, 
+    background: linear-gradient(rgba(0,0,0,.1), 65%, rgba(0,0,0,.7)) border-box, 
                 url(images/churchPic.JPG);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 30%;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     display: grid;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
 }
 
-.title > h1 {
+.title h1 {
     color: var(--title-text-color);
     font-size: 5vw;
     font-family: "Satisfy", sans-serif;
     text-shadow: 2px 2px 2px black;
     font-weight: lighter;
     animation: title 1.5s 1;
+    margin-top: 30vh;
 }
+
+.arrow {
+    margin: 0;
+    padding: 0;
+}
+
+.arrow a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--title-text-color);
+    font-size: 2rem;
+    animation: arrowFadeIn 2s;
+}
+
+@keyframes arrowFadeIn {
+    0% {
+        opacity: 0;
+    } 80% {
+        opacity: 0;
+    }
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    } 40% {
+        transform: translateY(-30px);
+    } 60% {
+        transform: translateY(-15px);
+    }
+  }
 
 .book-link:link, .book-link:visited {
     text-decoration: none;
@@ -393,8 +431,17 @@ body {
         width: 1fr;
     }
 
-    .title > h1 {
+    .title h1 {
         font-size: 2rem;
+        margin-top: 10vh;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .bounce {
+        transform: none;
     }
 
     @keyframes title {
