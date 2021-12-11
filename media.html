@@ -56,31 +56,10 @@
 
         .gallery-item:hover {
             transform: scale(1.05);
+            cursor: zoom-in;
         }
 
-        /* HOVER EFFECT WITH HIDDEN FLOATING TEXT - IT SORTA WORKS BUT FLASHES AND NEEDS MORE WORK*/
-        /* .gallery-item img:hover + .hide {
-            display: block;
-            transition: .2s ease;
-            z-index: 1;
-        }
-
-        .hide {
-            display: none;
-            z-index: 0;
-        }
-
-        .gallery-item div {
-            position: absolute;
-            width: 100%;
-            height: 48%;
-            top: 0;
-            padding-top: 38%;
-            color: white;
-            background: rgba(0, 0, 0, .5);
-        } */
-
-        .lightbox {
+        .showcase {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -97,22 +76,26 @@
             z-index: 10;
         }
 
-        .lightbox:target {
-            transform:scale(1);
+        .showcase:target {
+            transform: scale(1);
             opacity: 1;
         }
 
-        .lightbox-content {
-            width: 60%;
+        .showcase-content {
+            max-width: 90vw;
+            max-height: 90vh;
             position: relative;
-            text-align: center;
+            display: flex;
+            justify-items: center;
+            align-content: center;
         }
 
-        .lightbox-image-horizontal { width: 100%; }
+        .showcase-content img {
+            width: 100%;
+            object-fit: cover;
+        }
 
-        .lightbox-image-vertical { width: 65%; }
-
-        .lightbox-close {
+        .showcase-close {
             position: absolute;
             right: -1em;
             top: -1em;
@@ -127,7 +110,7 @@
             text-decoration: none;
         }
 
-        .lightbox-close::after {
+        .showcase-close::after {
             content: "x";
             color: white;
         }
@@ -136,10 +119,6 @@
             .card-content {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .lightbox-content {
-                width: 90%;
-            }
         }
 
         @media screen and (max-width: 690px) {
@@ -147,7 +126,7 @@
                 grid-template-columns: repeat(1, 1fr);
             }
 
-            .lightbox {
+            .showcase {
                 display: none;
             }
 
@@ -163,159 +142,158 @@
                 <h6>Pie Contest 2021</h6>
             </div>
             <div class="card-content">
-                <a class="gallery-item" href="#lightbox-item-1">
+                <a class="gallery-item" href="#showcase-item-1">
                     <img src="images/pieContest/pieContest1.jpg">    
-                    <!-- <div class="hover-text hide">click to enlarge</div> -->
                 </a>
-                <a class="gallery-item" href="#lightbox-item-2">
+                <a class="gallery-item" href="#showcase-item-2">
                     <img src="images/pieContest/pieContest18.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-3">
+                <a class="gallery-item" href="#showcase-item-3">
                     <img src="images/pieContest/pieContest10.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-4">
+                <a class="gallery-item" href="#showcase-item-4">
                     <img src="images/pieContest/pieContest15.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-5">
+                <a class="gallery-item" href="#showcase-item-5">
                     <img src="images/pieContest/pieContest16.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-6">
+                <a class="gallery-item" href="#showcase-item-6">
                     <img src="images/pieContest/pieContest12.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-7">
+                <a class="gallery-item" href="#showcase-item-7">
                     <img src="images/pieContest/pieContest2.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-8">
+                <a class="gallery-item" href="#showcase-item-8">
                     <img src="images/pieContest/pieContest3.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-9">
+                <a class="gallery-item" href="#showcase-item-9">
                     <img src="images/pieContest/pieContest4.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-10">
+                <a class="gallery-item" href="#showcase-item-10">
                     <img src="images/pieContest/pieContest5.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-11">
+                <a class="gallery-item" href="#showcase-item-11">
                     <img src="images/pieContest/pieContest6.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-12">
+                <a class="gallery-item" href="#showcase-item-12">
                     <img src="images/pieContest/pieContest7.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-13">
+                <a class="gallery-item" href="#showcase-item-13">
                     <img src="images/pieContest/pieContest9.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-14">
+                <a class="gallery-item" href="#showcase-item-14">
                     <img src="images/pieContest/pieContest8.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-15">
+                <a class="gallery-item" href="#showcase-item-15">
                     <img src="images/pieContest/pieContest11.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-16">
+                <a class="gallery-item" href="#showcase-item-16">
                     <img src="images/pieContest/pieContest13.jpg">
                 </a>
-                <a class="gallery-item" href="#lightbox-item-17">
+                <a class="gallery-item" href="#showcase-item-17">
                     <img src="images/pieContest/pieContest17.jpg">
                 </a> 
 
-                <div class="lightbox" id="lightbox-item-1">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-1" class="lightbox-close"></a>
-                        <img class="lightbox-image-horizontal" src="images/pieContest/pieContest1.jpg">
+                <div class="showcase" id="showcase-item-1">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-1" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest1.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-2">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-2" class="lightbox-close"></a>
-                        <img class="lightbox-image-horizontal" src="images/pieContest/pieContest18.jpg">
+                <div class="showcase" id="showcase-item-2">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-2" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest18.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-3">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-3" class="lightbox-close"></a>
-                        <img class="lightbox-image-horizontal" src="images/pieContest/pieContest10.jpg">
+                <div class="showcase" id="showcase-item-3">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-3" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest10.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-4">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-4" class="lightbox-close"></a>
-                        <img class="lightbox-image-horizontal" src="images/pieContest/pieContest15.jpg">
+                <div class="showcase" id="showcase-item-4">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-4" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest15.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-5">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-5" class="lightbox-close"></a>
-                        <img class="lightbox-image-horizontal" src="images/pieContest/pieContest16.jpg">
+                <div class="showcase" id="showcase-item-5">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-5" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest16.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-6">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-6" class="lightbox-close"></a>
-                        <img class="lightbox-image-horizontal" src="images/pieContest/pieContest12.jpg">
+                <div class="showcase" id="showcase-item-6">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-6" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest12.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-7">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-7" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest2.jpg">
+                <div class="showcase" id="showcase-item-7">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-7" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest2.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-8">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-8" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest3.jpg">
+                <div class="showcase" id="showcase-item-8">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-8" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest3.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-9">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-9" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest4.jpg">
+                <div class="showcase" id="showcase-item-9">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-9" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest4.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-10">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-10" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest5.jpg">
+                <div class="showcase" id="showcase-item-10">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-10" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest5.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-11">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-11" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest6.jpg">
+                <div class="showcase" id="showcase-item-11">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-11" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest6.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-12">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-12" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest7.jpg">
+                <div class="showcase" id="showcase-item-12">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-12" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest7.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-13">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-13" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest9.jpg">
+                <div class="showcase" id="showcase-item-13">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-13" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest9.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-14">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-14" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest8.jpg">
+                <div class="showcase" id="showcase-item-14">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-14" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest8.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-15">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-15" class="lightbox-close"></a>
-                        <img class="lightbox-image-vertical" src="images/pieContest/pieContest11.jpg">
+                <div class="showcase" id="showcase-item-15">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-15" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest11.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-16">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-16" class="lightbox-close"></a>
-                        <img class="lightbox-image-horizontal" src="images/pieContest/pieContest13.jpg">
+                <div class="showcase" id="showcase-item-16">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-16" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest13.jpg">
                     </div>
                 </div>
-                <div class="lightbox" id="lightbox-item-17">
-                    <div class="lightbox-content">
-                        <a href="#gallery-item-17" class="lightbox-close"></a>
-                        <img class="lightbox-image-horizontal" src="images/pieContest/pieContest17.jpg">
+                <div class="showcase" id="showcase-item-17">
+                    <div class="showcase-content">
+                        <a href="#gallery-item-17" class="showcase-close"></a>
+                        <img src="images/pieContest/pieContest17.jpg">
                     </div>
                 </div>
             </div>
