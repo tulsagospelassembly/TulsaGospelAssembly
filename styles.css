@@ -513,7 +513,16 @@ body {
         font-size: 1rem;
         color: var(--navbar-text-color);
     }
-
+    .nav-wrapper .search-bar {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
     .nav-items {
         position: fixed;
         width: 100%;
