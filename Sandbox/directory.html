@@ -1,26 +1,28 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173459467-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-173459467-1');
-    </script>
+<div>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173459467-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-173459467-1');
+        </script>
 
-    <title>Tulsa Gospel Assembly</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-</head>
+        <title>Tulsa Gospel Assembly</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </head>
+</div>
 
 <body>
     <nav class="nav-wrapper">
@@ -30,10 +32,84 @@
             <a class="nav-item" href="aboutUs.html">About Us</a>
             <a class="nav-item" href="aboutThePastor.html">About the Pastor</a>
             <a class="nav-item" href="media.html">Media</a>
-            <input class="nav-item search-bar" type="text" placeholder="Search..">
+            <input class="nav-item search-bar" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a name">
             <button type="submit"><i class="fa fa-search"></i></button>
             <!-- <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a> -->
         </div>
     </nav>
+    <br />
+    <br />
+    <br />
+    <div>
+        <table id="myTable">
+            <tr class="header">
+                <th style="width:33%;">State, City</th>
+                <th style="width:33%;">Pastor</th>
+                <th style="width:33%;">Address</th>
+            </tr>
+            <tr>
+                <td>Tulsa, Oklahoma</td>
+                <td>Bro. Igler</td>
+                <td>8515 Whirlpool Dr<br />Sperry, OK 74073</td>
+            </tr>
+            <tr>
+                <td>State,City</td>
+                <td>Pastor</td>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>State,City</td>
+                <td>Pastor</td>
+                <td>Address</td>>
+            </tr>
+            <tr>
+                <td>State,City</td>
+                <td>Pastor</td>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>State,City</td>
+                <td>Pastor</td>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>State,City</td>
+                <td>Pastor</td>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>State,City</td>
+                <td>Pastor</td>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>State,City</td>
+                <td>Pastor</td>
+                <td>Address</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+
 </body>
 </html>
