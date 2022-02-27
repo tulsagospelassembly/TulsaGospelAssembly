@@ -32,6 +32,7 @@
             <a class="nav-item" href="aboutUs.html">About Us</a>
             <a class="nav-item" href="aboutThePastor.html">About the Pastor</a>
             <a class="nav-item" href="media.html">Media</a>
+            <a class="nav-item" href="directory.html">Directory</a>
             <input class="nav-item search-bar" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a name">
             <button type="submit"><i class="fa fa-search"></i></button>
             <!-- <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a> -->
@@ -94,25 +95,26 @@
             </tr>
         </table>
     </div>
-    <script>
+    <script> 
         function myFunction() {
-            var input, filter, table, tr, td, i, txtValue;
+            var input, filter, table, tr, td, i;
             input = document.getElementById("myInput");
             filter = input.value.toUpperCase();
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
+                td = tr[i].getElementsByTagName("td")[0]; // for column one
+                td1 = tr[i].getElementsByTagName("td")[1]; // for column two
+                /* ADD columns here that you want you to filter to be used on */
                 if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    if ((td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1)) {
                         tr[i].style.display = "";
                     } else {
                         tr[i].style.display = "none";
                     }
                 }
             }
-        }
+        } 
     </script>
 
 
