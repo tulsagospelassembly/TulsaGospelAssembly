@@ -6,6 +6,7 @@ body {
     --light-gray:   #CACACA;
     --medium-gray: #7A7A7A;
     --dark-gray: #33383D;
+    --some-blue: #5c7799;
 
     /* VARIABLES TO CHANGE COLORS ACROSS ALL COMPONETS OF WEBSITE */
     --main-background-color: var(--white-color);
@@ -592,4 +593,69 @@ body {
     #myTable th {
         background-color: var(--dark-navy);
         color: var(--white-color);
+    }
+
+#dheader {
+    padding-top: 50px;
+    background-color: var(--medium-gray);
+}
+
+#h1 {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: var(--dark-navy);
+    position: relative;
+    text-align: center;
+    color: var(--footer-text-color);
+    margin: 0;
+}
+#container {
+    background-color: var(--dark-gray);
+    display: block;
+    float: left;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 20px;
+}
+    #container .h1 {
+        position: relative;
+        /*bottom: 0;
+        margin: 0;*/
+        padding: 0;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #container .box {
+        border-radius: 15px;
+        float: left;
+        border: 1px solid black;
+        height: 200px;
+        width: 200px;
+        margin: 6px 6px;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        filter: brightness(100%);
+        transform: scale(1);
+        transition: 200ms ease-in-out;
+    }
+        #container .box:hover {
+            filter: brightness(50%);
+            transform: scale(1.1);
+            transition: 200ms ease-in-out;
+            
+        }
+
+    #container .tulsa {
+        background-image: url(churchimages/tulsa.JPG);
+    }
+    #container .skiatook {
+        background-image: url(churchimages/skiatook.JPG)
+    }
+    #container .okc {
+        background-image: url(churchimages/okc.JPG);
     }

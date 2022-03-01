@@ -38,64 +38,83 @@
             <!-- <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a> -->
         </div>
     </nav>
-    <br />
-    <br />
-    <br />
-    <div>
-        <table id="myTable">
+    <div id="dheader">
+        <h1>Church Directory</h1>
+        <p>Here is a list of churches that believe like us basically(Definitely word this better)</p>
+    </div>
+    <div id="container">
+
+        <div class="box tulsa">
+            <h1 id="h1" style="text-align: center;">
+                Tulsa Gospel Assembly
+            </h1>
+        </div>
+        <div class="box skiatook">
+            <h1 id="h1" style="text-align: center;">
+                Skiatook Gospel Tabernacle
+            </h1>
+        </div>
+        <div class="box okc">
+            <h1 id="h1">
+                Spencer Gospel Tabernacle
+            </h1>
+        </div>
+    </div>
+    <!--<div>
             <tr class="header" id="test123">
                 <th style="width:33%;">State, City</th>
                 <th style="width:33%;">Pastor</th>
                 <th style="width:33%;">Address</th>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>Tulsa, Oklahoma</td>
                 <td>Bro. Igler</td>
                 <td>8515 Whirlpool Dr<br />Sperry, OK 74073</td>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>Stillwater, Oklahoma</td>
                 <td>Bro. Gene Robinson</td>
                 <td>400 South Union Rd<br />Stillwater, OK 74075</td>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>Skiatook, Oklahoma</td>
                 <td>Bro. Gary Caughron</td>
                 <td>186th and Old Hillside<br />Skiatook, OK 74070</td>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>McAlester, Oklahoma</td>
                 <td>Bro. J.D. Wyzard</td>
                 <td>1664 W. State Hwy. 31<br />McAlester, OK 74501</td>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>Oklahoma City, Oklahoma</td>
                 <td>Bro. Randy Leniger</td>
                 <td>9115 N.E. 36th<br />Spencer, OK 73084</td>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>Poteau, Oklahoma</td>
                 <td>Bro. Carl Daniels</td>
                 <td>100 Strip Pit Rd<br />Poteau, OK 74953</td>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>Marlow, Oklahoma</td>
                 <td>Bro. Doug Martin</td>
                 <td>503 E. Main<br />Marlow, OK 73055</td>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>Ardmore, Oklahoma</td>
                 <td>Bro. Brian Martin</td>
                 <td>8565 State Hwy 199<br />Ardmore, OK 73401</td>
             </tr>
-            <tr>
+            <tr class="table-items">
                 <td>Adair, Oklahoma</td>
                 <td>Bro. Larry Brown</td>
                 <td>4008 W. 370 Rd<br />Adair, OK 74330</td>
             </tr>
         </table>
     </div>
-    <script> 
+    -->
+    <script>
         function myFunction() {
             var input, filter, table, tr, td, i;
             input = document.getElementById("myInput");
@@ -106,7 +125,7 @@
                 td = tr[i].getElementsByTagName("td")[0]; // for column one
                 td1 = tr[i].getElementsByTagName("td")[1]; // for column two
                 /* ADD columns here that you want you to filter to be used on */
-                if (td) {
+                if (td && td1) {
                     if ((td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1)) {
                         tr[i].style.display = "";
                     } else {
@@ -114,7 +133,7 @@
                     }
                 }
             }
-        } 
+        }
     </script>
 
 
