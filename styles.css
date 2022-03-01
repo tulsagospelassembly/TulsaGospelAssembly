@@ -572,8 +572,8 @@ body {
         font-size: 45px;
     }
 }
-
-#myTable {
+ /* Reed: I commented this css out here and moved into style tag in directory.html */
+/* #myTable {
     border-collapse: collapse;
     width: 100%;
     height: 100%;
@@ -620,10 +620,10 @@ body {
     padding-top: 20px;
 }
     #container .h1 {
-        position: relative;
+        position: relative; */
         /*bottom: 0;
         margin: 0;*/
-        padding: 0;
+        /* padding: 0;
         padding: 10px;
         font-size: 14px;
     }
@@ -658,4 +658,4 @@ body {
     }
     #container .okc {
         background-image: url(churchimages/okc.JPG);
-    }
+    } */
