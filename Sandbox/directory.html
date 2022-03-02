@@ -33,122 +33,172 @@
             <a class="nav-item" href="../aboutThePastor.html">About the Pastor</a>
             <a class="nav-item" href="../media.html">Media</a>
             <a class="nav-item" href="directory.html">Directory</a>
-            <input class="nav-item search-bar" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a name">
-            <button type="submit"><i class="fa fa-search"></i></button>
             <!-- <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a> -->
         </div>
     </nav>
-    <div id="dheader">
-        <h1>Church Directory</h1>
-        <p>Here is a list of churches that believe like us basically(Definitely word this better)</p>
-    </div>
-    <div id="container">
 
-        <div class="box tulsa">
-            <h1 id="h1" style="text-align: center;">
-                Tulsa Gospel Assembly
-            </h1>
-        </div>
-        <div class="box skiatook">
-            <h1 id="h1" style="text-align: center;">
-                Skiatook Gospel Tabernacle
-            </h1>
-        </div>
-        <div class="box okc">
-            <h1 id="h1">
-                Spencer Gospel Tabernacle
-            </h1>
-        </div>
-    </div>
-    <!--<div>
-            <tr class="header" id="test123">
-                <th style="width:33%;">State, City</th>
-                <th style="width:33%;">Pastor</th>
-                <th style="width:33%;">Address</th>
-            </tr>
-            <tr class="table-items">
-                <td>Tulsa, Oklahoma</td>
-                <td>Bro. Igler</td>
-                <td>8515 Whirlpool Dr<br />Sperry, OK 74073</td>
-            </tr>
-            <tr class="table-items">
-                <td>Stillwater, Oklahoma</td>
-                <td>Bro. Gene Robinson</td>
-                <td>400 South Union Rd<br />Stillwater, OK 74075</td>
-            </tr>
-            <tr class="table-items">
-                <td>Skiatook, Oklahoma</td>
-                <td>Bro. Gary Caughron</td>
-                <td>186th and Old Hillside<br />Skiatook, OK 74070</td>
-            </tr>
-            <tr class="table-items">
-                <td>McAlester, Oklahoma</td>
-                <td>Bro. J.D. Wyzard</td>
-                <td>1664 W. State Hwy. 31<br />McAlester, OK 74501</td>
-            </tr>
-            <tr class="table-items">
-                <td>Oklahoma City, Oklahoma</td>
-                <td>Bro. Randy Leniger</td>
-                <td>9115 N.E. 36th<br />Spencer, OK 73084</td>
-            </tr>
-            <tr class="table-items">
-                <td>Poteau, Oklahoma</td>
-                <td>Bro. Carl Daniels</td>
-                <td>100 Strip Pit Rd<br />Poteau, OK 74953</td>
-            </tr>
-            <tr class="table-items">
-                <td>Marlow, Oklahoma</td>
-                <td>Bro. Doug Martin</td>
-                <td>503 E. Main<br />Marlow, OK 73055</td>
-            </tr>
-            <tr class="table-items">
-                <td>Ardmore, Oklahoma</td>
-                <td>Bro. Brian Martin</td>
-                <td>8565 State Hwy 199<br />Ardmore, OK 73401</td>
-            </tr>
-            <tr class="table-items">
-                <td>Adair, Oklahoma</td>
-                <td>Bro. Larry Brown</td>
-                <td>4008 W. 370 Rd<br />Adair, OK 74330</td>
-            </tr>
-        </table>
-    </div>
-    -->
-    
-    <!-- Reed: I moved all your CSS inside this style tag and commented it out in styles.css -->
     <style>
-        #myTable {
-            border-collapse: collapse;
-            width: 100%;
+        .directory-wrapper {
+            display: grid; /* This padding just compensates for the height of the navbar */
+        }
+
+        .card-wrapper {
+            max-width: 100%;
             height: 100%;
-            color: var(--white-color);
-            background-color: var(--dark-gray);
-            font-size: 14px;
+            padding-right: 40px;
+        }
+    </style>
+
+    <div id="dheaderr" class="directory-wrapper">
+        <div class="card-wrapper">
+            <div class="card-header">
+                <h6>Church Directory</h6>
+            </div>
+            <div class="card-content2">
+                <div id="container">
+
+                    <div class="box tulsa" style="cursor: pointer;" onclick="$('.hover_bkgr_fricc').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Tulsa Gospel Assembly
+                        </h1>
+                    </div>
+                    <div class="box skiatook" style="cursor: pointer;">
+                        <h1 id="h111" style="text-align: center;">
+                            Skiatook Gospel Tabernacle
+                        </h1>
+                    </div>
+                    <div class="box okc" style="cursor: pointer;">
+                        <h1 id="h111" style="text-align: center;">
+                            Spencer Gospel Tabernacle
+                        </h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--this is the pop-up for each church-->
+    <div class="hover_bkgr_fricc">
+        <span class="helper"></span>
+        <!-- Isaac: Is there a way to make a function so that when this pop-up is opened, it will populate the fields with the church's info, 
+            so we dont have to make a seperate pop-up and whatnot for every single church?
+            TL;DR : have a function that populates one pop-up box with the church's info that you just clicked on-->
+        <div>
+            <div class="popupCloseButton" onclick="$('.hover_bkgr_fricc').hide();">&times;</div>
+            <h1 id="popupheader">Tulsa Gospel Assembly</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Igler</h1>
+            <h1 id="popupbody">Address:<br />8515 Whirlpool Dr<br />Sperry, OK 74073</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />tulsagospelassembly@gmail.com<br />(918)-555-5555</h1>
+        </div>
+    </div>
+
+    <style>
+        /*this is the pop-up styling for each church*/
+        #popupheader {
+            font-size: 22px;
+            text-decoration: underline;
+            border: thin;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.92;
+            position: relative;
+            background-color: #33383D;
+            color: #C5C5C5;
+        }
+        #popuppastor {
+            border: thin;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.92;
+            position: relative;
+            background-color: #33383D;
+            color: #C5C5C5;
+        }
+        #popupbody {
+            border: thin;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.92;
+            position: relative;
+            background-color: #33383D;
+            color: #C5C5C5;
+        }
+        #popupnumber {
+            border: thin;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.92;
+            position: relative;
+            background-color: #33383D;
+            color: #C5C5C5;
+        }
+        .hover_bkgr_fricc {
+            background: rgba(0,0,0,.4);
+            display: none;
+            height: 100%;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 10000;
         }
 
-        #myTable th, #myTable td {
-            text-align: left;
-            padding: 14px;
-        }
-        
-        #myTable tr.header, #myTable tr:hover {
-            background-color: #f1f1f1;
-            background-color: var(--medium-navy);
+            .hover_bkgr_fricc .helper {
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+
+            .hover_bkgr_fricc > div {
+                background-image: url(../churchimages/tulsa.JPG);
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 1;
+                border: thick;
+                filter: brightness(90%);
+                box-shadow: 10px 10px 60px #555;
+                display: inline-block;
+                height: auto;
+                max-width: 450px;
+                min-height: 400px;
+                vertical-align: middle;
+                width: 60%;
+                position: relative;
+                border-radius: 8px;
+                padding: 15px 5%;
+            }
+
+        .popupCloseButton {
+            background-color: #fff;
+            border: 3px solid #999;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
         }
 
-        #myTable th {
-            background-color: var(--dark-navy);
-            color: var(--white-color);
+            .popupCloseButton:hover {
+                background-color: #ccc;
+            }
+
+        .trigger_popup_fricc {
+            cursor: pointer;
+            margin: 20px;
+            display: inline-block;
+            font-weight: bold;
         }
 
-        #dheader {
-            padding-top: 50px;
-            background-color: var(--medium-gray);
-        }
 
-        #h1 {
-            border-top-right-radius: 15px;
-            border-top-left-radius: 15px;
+
+        #h111 {
+            border-top-right-radius: 13px;
+            border-top-left-radius: 13px;
             background-color: var(--dark-navy);
             position: relative;
             text-align: center;
@@ -157,7 +207,7 @@
         }
 
         #container {
-            background-color: var(--dark-gray);
+            user-select: none; /* Standard */
             display: block;
             float: left;
             width: 100%;
@@ -167,71 +217,49 @@
             padding-top: 20px;
         }
 
-        #container .h1 {
-            position: relative;
-            /*bottom: 0;
-            margin: 0;*/
-            padding: 0;
-            padding: 10px;
-            font-size: 14px;
-        }
-
-        #container .box {
-            border-radius: 15px;
-            float: left;
-            border: 1px solid black;
-            height: 200px;
-            width: 200px;
-            margin: 6px 6px;
-            background-size: cover;
-            background-position-x: center;
-            background-position-y: center;
-            background-repeat: no-repeat;
-            filter: brightness(100%);
-            transform: scale(1);
-            transition: 200ms ease-in-out;
-        }
-
-        #container .box:hover {
-            filter: brightness(50%);
-            transform: scale(1.1);
-            transition: 200ms ease-in-out;
-            
-        }
-
-        #container .tulsa {
-            background-image: url(../churchimages/tulsa.JPG);
-        }
-        #container .skiatook {
-            background-image: url(../churchimages/skiatook.JPG)
-        }
-        #container .okc {
-            background-image: url(../churchimages/okc.JPG);
-        }
-    </style>
-
-    <script>
-        function myFunction() {
-            var input, filter, table, tr, td, i;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0]; // for column one
-                td1 = tr[i].getElementsByTagName("td")[1]; // for column two
-                /* ADD columns here that you want you to filter to be used on */
-                if (td && td1) {
-                    if ((td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1)) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
+            #container .h1 {
+                user-select: none; /* Standard */
+                position: relative;
+                /*bottom: 0;
+        margin: 0;*/
+                padding: 0;
+                padding: 10px;
+                font-size: 14px;
             }
-        }
-    </script>
 
+            #container .box {
+                border-radius: 15px;
+                float: left;
+                border: 1px solid black;
+                height: 200px;
+                width: 200px;
+                margin: 6px 6px;
+                background-size: cover;
+                background-position-x: center;
+                background-position-y: center;
+                background-repeat: no-repeat;
+                filter: brightness(100%);
+                transform: scale(1);
+                transition: 200ms ease-in-out;
+            }
 
+                #container .box:hover {
+                    filter: brightness(50%);
+                    transform: scale(1.1);
+                    transition: 200ms ease-in-out;
+                }
+
+            #container .tulsa {
+                background-image: url(../churchimages/tulsa.JPG);
+            }
+
+            #container .skiatook {
+                background-image: url(../churchimages/skiatook.JPG)
+            }
+
+            #container .okc {
+                background-image: url(../churchimages/okc.JPG);
+            } 
+    </style>
 </body>
 </html>

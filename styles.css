@@ -272,6 +272,10 @@ body {
     animation: cardContentReveal 1.2s;
 }
 
+.card-content2 {
+    animation: cardContentReveal 1.2s;
+}
+
 @keyframes cardContentReveal {
     0% {
         opacity: 0;
@@ -599,18 +603,19 @@ body {
     padding-top: 50px;
     background-color: var(--medium-gray);
 }
-
-#h1 {
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    
+#h111 {
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
     background-color: var(--dark-navy);
     position: relative;
     text-align: center;
     color: var(--footer-text-color);
     margin: 0;
 }
+
 #container {
-    background-color: var(--dark-gray);
+    user-select: none; /* Standard 
     display: block;
     float: left;
     width: 100%;
@@ -620,10 +625,11 @@ body {
     padding-top: 20px;
 }
     #container .h1 {
-        position: relative; */
+        user-select: none; /* Standard 
+        position: relative;
         /*bottom: 0;
-        margin: 0;*/
-        /* padding: 0;
+        margin: 0;
+        padding: 0;
         padding: 10px;
         font-size: 14px;
     }
@@ -658,4 +664,5 @@ body {
     }
     #container .okc {
         background-image: url(churchimages/okc.JPG);
-    } */
+    }
+*/
