@@ -36,7 +36,7 @@
             <a class="nav-item" href="aboutUs.html">About Us</a>
             <a class="nav-item" href="aboutThePastor.html">About the Pastor</a>
             <a class="nav-item" href="media.html">Media</a>
-            <a class="nav-item" href="sandbox/directory.html">Directory</a>
+            <!-- <a class="nav-item" href="sandbox/directory.html">Directory</a> -->
             <!-- <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a> -->
         </div>
     </nav>
@@ -73,10 +73,21 @@
                 <br>
                 <p><a class="book-link" href="https://www.amazon.com/Bible-Chronology-Pertinence-T-Igler/dp/1633573761" target="_blank" rel="noopener noreferrer">https://www.amazon.com/Bible-Chronology-Pertinence-T-Igler/dp/1633573761</a></p>
             </div>
-            <div class="contact-us-quad quad">
+            <!-- <div class="contact-us-quad quad">
                 <i class="far fa-envelope"></i>
                 <h6>Contact Us</h6>
                 <p>Feel free to contact us by email at tulsagospelassembly@gmail.com</p>
+            </div> -->
+            <div class="contact-us-quad quad" id="contact-us">
+                <i class="far fa-envelope"></i>
+                <h6>Contact Us</h6>
+                <form name="contact" action="#" netlify>
+                    <input type="text" name="name" id="contact-form-name" placeholder="Name" required>
+                    <input type="email" name="email" id="contact-form-email" placeholder="Email address" required>
+                    <input type="text" name="subject" id="contact-form-subject" placeholder="Subject" required>
+                    <textarea type="text" name="message" id="contact-form-message" placeholder="Message" required></textarea>
+                    <input type="submit" id="contact-form-submit" value="Submit">
+                </form>
             </div>
         </div>
 

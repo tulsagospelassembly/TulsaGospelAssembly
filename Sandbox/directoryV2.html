@@ -54,6 +54,16 @@
         .card-wrapper {
             max-width: 1200px;
         }
+
+        .card-content {
+            display: grid;
+        }
+
+        .search-bar {
+            margin: 20px;
+            width: 50%;
+            justify-self: center;
+        }
     </style>
 
     <!-- Reed:
@@ -69,8 +79,8 @@
             <div class="card-content">
                 <!-- Reed: I moved the search bar down from the navbar and into the table area (probably not final placement yet)
                            to indicate to the user that they're searching the table and not the whole site -->
-                <input class="nav-item search-bar" type="text" id="directorySearchInput" onkeyup="searchDirectory()" placeholder="Search..">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <input class="search-bar" type="text" id="directorySearchInput" onkeyup="searchDirectory()" placeholder="Search..">
+                <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
                 <!-- Reed: I went back to the table to be able to utilize the search
                            but will try to style it similar to the new way -->
                 <table id="directoryTable"> 
