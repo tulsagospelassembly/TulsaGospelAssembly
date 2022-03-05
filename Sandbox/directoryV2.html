@@ -1,0 +1,165 @@
+<!-- Reed:
+        I created directoryV2 just to play with some things without undoing
+        what you had going on in the original directory.html. Feel free to
+        ignore this file or just compare it to the original if you want. 
+        I'll try to comment my thoughts on what I'm changing in this file.-->
+
+
+<!DOCTYPE html>
+<html>
+<div>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173459467-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-173459467-1');
+        </script>
+
+        <title>Tulsa Gospel Assembly</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </head>
+</div>
+
+<body>
+    <nav class="nav-wrapper">
+        <i class="burger-icon fas fa-bars"></i>
+        <div class="nav-items">
+            <a class="nav-item" href="../index.html">Home</a>
+            <a class="nav-item" href="../aboutUs.html">About Us</a>
+            <a class="nav-item" href="../aboutThePastor.html">About the Pastor</a>
+            <a class="nav-item" href="../media.html">Media</a>
+            <a class="nav-item" href="directory.html">Directory</a>
+            <!-- <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a> -->
+        </div>
+    </nav>
+
+    <style>
+        .directory-wrapper {
+            display: grid;
+            padding-top: 60px; /* This padding just compensates for the height of the navbar */
+            justify-content: center;
+        }
+
+        .card-wrapper {
+            max-width: 1200px;
+        }
+
+        .card-content {
+            display: grid;
+        }
+
+        .search-bar {
+            margin: 20px;
+            width: 50%;
+            justify-self: center;
+        }
+    </style>
+
+    <!-- Reed:
+            I integrated the header, table and everything else into this div structure and used
+            the classes directory-wrapper, card-wrapper, card-header, and card-content. This combination of div structure
+            and css classes is repeated on the other html pages so they all look cohesive. And those classes are already 
+            defined in styles.css so applying them here automatically handles a lot of the general styling (alignment, font sizes, color, animations, etc) -->
+    <div class="directory-wrapper"> 
+        <div class="card-wrapper">
+            <div class="card-header">
+                <h6>Church Directory</h6>
+            </div>
+            <div class="card-content">
+                <!-- Reed: I moved the search bar down from the navbar and into the table area (probably not final placement yet)
+                           to indicate to the user that they're searching the table and not the whole site -->
+                <input class="search-bar" type="text" id="directorySearchInput" onkeyup="searchDirectory()" placeholder="Search..">
+                <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+                <!-- Reed: I went back to the table to be able to utilize the search
+                           but will try to style it similar to the new way -->
+                <table id="directoryTable"> 
+                    <tr class="header">
+                        <th>State, City</th>
+                        <th>Pastor</th>
+                        <th>Address</th>
+                    </tr>
+                    <tr class="table-item">
+                        <td>Tulsa, Oklahoma</td>
+                        <td>Bro. Igler</td>
+                        <td>8515 Whirlpool Dr<br />Sperry, OK 74073</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td>Stillwater, Oklahoma</td>
+                        <td>Bro. Gene Robinson</td>
+                        <td>400 South Union Rd<br />Stillwater, OK 74075</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td>Skiatook, Oklahoma</td>
+                        <td>Bro. Gary Caughron</td>
+                        <td>186th and Old Hillside<br />Skiatook, OK 74070</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td>McAlester, Oklahoma</td>
+                        <td>Bro. J.D. Wyzard</td>
+                        <td>1664 W. State Hwy. 31<br />McAlester, OK 74501</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td>Oklahoma City, Oklahoma</td>
+                        <td>Bro. Randy Leniger</td>
+                        <td>9115 N.E. 36th<br />Spencer, OK 73084</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td>Poteau, Oklahoma</td>
+                        <td>Bro. Carl Daniels</td>
+                        <td>100 Strip Pit Rd<br />Poteau, OK 74953</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td>Marlow, Oklahoma</td>
+                        <td>Bro. Doug Martin</td>
+                        <td>503 E. Main<br />Marlow, OK 73055</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td>Ardmore, Oklahoma</td>
+                        <td>Bro. Brian Martin</td>
+                        <td>8565 State Hwy 199<br />Ardmore, OK 73401</td>
+                    </tr>
+                    <tr class="table-item">
+                        <td>Adair, Oklahoma</td>
+                        <td>Bro. Larry Brown</td>
+                        <td>4008 W. 370 Rd<br />Adair, OK 74330</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchDirectory() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("directorySearchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("directoryTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // for column one
+                td1 = tr[i].getElementsByTagName("td")[1]; // for column two
+                /* ADD columns here that you want you to filter to be used on */
+                if (td && td1) {
+                    if ((td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1)) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

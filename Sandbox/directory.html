@@ -1,0 +1,694 @@
+﻿<!DOCTYPE html>
+<html>
+<div>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173459467-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-173459467-1');
+        </script>
+
+        <title>Tulsa Gospel Assembly</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </head>
+</div>
+
+<body>
+    <nav class="nav-wrapper">
+        <i class="burger-icon fas fa-bars"></i>
+        <div class="nav-items">
+            <a class="nav-item" href="../index.html">Home</a>
+            <a class="nav-item" href="../aboutUs.html">About Us</a>
+            <a class="nav-item" href="../aboutThePastor.html">About the Pastor</a>
+            <a class="nav-item" href="../media.html">Media</a>
+            <a class="nav-item" href="directory.html">Directory</a>
+            <!-- <a class="nav-item" href="thePastorsStudy.html">The Pastor's Study</a> -->
+        </div>
+    </nav>
+
+    <style>
+        .directory-wrapper {
+            display: grid; /* This padding just compensates for the height of the navbar */
+        }
+
+        .card-wrapper {
+            max-width: 100%;
+            height: 100%;
+            padding-right: 40px;
+        }
+
+        .filter-label {
+            font-size: 20px;
+        }
+
+        #states {
+            font-size: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("select").change(function () {
+                $(this).find("option:selected").each(function () {
+                    var optionValue = $(this).attr("value");
+                    if (optionValue) {
+                        $(".box").not("." + optionValue).hide();
+                        $("." + optionValue).show();
+                    } else {
+                        $(".box").hide();
+                    }
+                });
+            }).change();
+        });
+    </script>
+
+    <div id="dheaderr" class="directory-wrapper">
+        <div class="card-wrapper">
+            <div class="card-header cheader">
+                <h6 class="dheader">Church Directory</h6>
+                <label for="states" class="filter-label">Filter By State:</label>
+                <select name="states" id="states">
+                    <option value="All">All</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Kentucky">Kentucky</option>
+                </select>
+            </div>
+            <div class="card-content2">
+                <div id="container">
+                    <!--ADAIR,OK-->
+                    <div class="box adairb Oklahoma All" style="cursor: pointer;" onclick="$('.adair').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Country Gospel Church
+                        </h1>
+                    </div>
+
+                    <!--MCALESTER,OK-->
+                    <div class="box mcalesterb Oklahoma All" style="cursor: pointer;" onclick="$('.mcalester').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Gospel Assembly
+                        </h1>
+                    </div>
+
+                    <!--PADUCAH,KY-->
+                    <div class="box paducahb Kentucky All" style="cursor: pointer;" onclick="$('.paducah').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Gospel Assembly
+                        </h1>
+                    </div>
+
+                    <!--STILLWATER,OK-->
+                    <div class="box stillwaterb Oklahoma All" style="cursor: pointer;" onclick="$('.stillwater').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Gospel Chapel
+                        </h1>
+                    </div>
+
+                    <!--BOWLING GREEN,KY-->
+                    <div class="box bowlinggreenb Kentucky All" style="cursor: pointer;" onclick="$('.bowlinggreen').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Gospel of Peace Tabernacle
+                        </h1>
+                    </div>
+
+
+                    <!--SKIATOOK,OK-->
+                    <div class="box skiatookb Oklahoma All" style="cursor: pointer;" onclick="$('.skiatook').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Skiatook Gospel Tabernacle
+                        </h1>
+                    </div>
+
+                    <!--SPENCER,OK-->
+                    <div class="box okcb Oklahoma All" style="cursor: pointer;" onclick="$('.okc').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Spencer Gospel Tabernacle
+                        </h1>
+                    </div>
+
+
+                    <!--TULSA,OK-->
+                    <div class="box tulsab Oklahoma All" style="cursor: pointer;" onclick="$('.tulsa').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Tulsa Gospel Assembly
+                        </h1>
+                    </div>
+
+                    <!--ARDMORE,OK-->
+                    <div class="box ardmoreb Oklahoma All" style="cursor: pointer;" onclick="$('.ardmore').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Pathway To Life<br />(Ardmore)
+                        </h1>
+                    </div>
+
+                    <!--MARLOW,OK-->
+                    <div class="box marlowb Oklahoma All" style="cursor: pointer;" onclick="$('.marlow').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Pathway To Life<br />(Marlow)
+                        </h1>
+                    </div>
+
+                    <!--POTEAU,OK-->
+                    <div class="box poteaub Oklahoma All" style="cursor: pointer;" onclick="$('.poteau').show();">
+                        <h1 id="h111" style="text-align: center;">
+                            Poteau Gospel Tabernacle
+                        </h1>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--this is the pop-up for each church-->
+    <!--TULSA-->
+    <div class="hover_bkgr_fricc tulsa">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.tulsa').hide();">&times;</div>
+            <h1 id="popupheader">Tulsa Gospel Assembly</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Thomas Igler</h1>
+            <h1 id="popupbody">Address:<br />8515 Whirlpool Dr<br />Sperry, OK 74073</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />tulsagospelassembly@gmail.com<br />(918)-555-5555</h1>
+        </div>
+    </div>
+    <!--SKIATOOK-->
+    <div class="hover_bkgr_fricc skiatook">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.skiatook').hide();">&times;</div>
+            <h1 id="popupheader">Skiatook Gospel Tabernacle</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Gary Caughron</h1>
+            <h1 id="popupbody">Address:<br />186th & Hillside<br />Skiatook, OK 74070</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(918)-555-5555</h1>
+        </div>
+    </div>
+    <!--OKC-->
+    <div class="hover_bkgr_fricc okc">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.okc').hide();">&times;</div>
+            <h1 id="popupheader">Spencer Gospel Tabernacle</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Randy Lineger</h1>
+            <h1 id="popupbody">Address:<br />186th & Hillside<br />Spencer, OK 74070</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(405) 990-2037</h1>
+        </div>
+    </div>
+    <!--STILLWATER-->
+    <div class="hover_bkgr_fricc stillwater">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.stillwater').hide();">&times;</div>
+            <h1 id="popupheader">Gospel Chapel</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Gene Robinson</h1>
+            <h1 id="popupbody">Address:<br />400 South Union Rd<br />Stillwater, OK 74075</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(555) 555-5555</h1>
+        </div>
+    </div>
+    <!--MCALESTER-->
+    <div class="hover_bkgr_fricc mcalester">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.mcalester').hide();">&times;</div>
+            <h1 id="popupheader">Gospel Chapel</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. J.D. Wyzard</h1>
+            <h1 id="popupbody">Address:<br />1664 W. State Hwy. 31<br />McAlester, OK 74501</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(555) 555-5555</h1>
+        </div>
+    </div>
+    <!--POTEAU-->
+    <div class="hover_bkgr_fricc poteau">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.poteau').hide();">&times;</div>
+            <h1 id="popupheader">Poteau Gospel Tabernacle</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Carl Daniels</h1>
+            <h1 id="popupbody">Address:<br />100 Strip Pit Rd<br />Poteau, OK 74953</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(555) 555-5555</h1>
+        </div>
+    </div>
+    <!--MARLOW-->
+    <div class="hover_bkgr_fricc marlow">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.marlow').hide();">&times;</div>
+            <h1 id="popupheader">Pathway To Life</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Doug Martin</h1>
+            <h1 id="popupbody">Address:<br />503 E. Main<br />Marlow, OK 73055</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(555) 555-5555</h1>
+        </div>
+    </div>
+    <!--ARDMORE-->
+    <div class="hover_bkgr_fricc ardmore">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.ardmore').hide();">&times;</div>
+            <h1 id="popupheader">Pathway To Life</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Brian Martin</h1>
+            <h1 id="popupbody">Address:<br />8565 State Hwy 199<br />Ardmore, OK 73401</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(555) 555-5555</h1>
+        </div>
+    </div>
+    <!--ADAIR-->
+    <div class="hover_bkgr_fricc adair">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.adair').hide();">&times;</div>
+            <h1 id="popupheader">Country Gospel Church</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Larry Brown</h1>
+            <h1 id="popupbody">Address:<br />4008 W. 370 Rd<br />Adair, OK 74330</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(555) 555-5555</h1>
+        </div>
+    </div>
+    <!--    KENTUCKY    -->
+    <!--BOWLING GREEN-->
+    <div class="hover_bkgr_fricc bowlinggreen">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.bowlinggreen').hide();">&times;</div>
+            <h1 id="popupheader">Country Gospel Church</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Dennis Hymer</h1>
+            <h1 id="popupbody">Address:<br />616 Blue Level Rd<br />Bowling Green, KY 42101</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(555) 555-5555</h1>
+        </div>
+    </div>
+    <div class="hover_bkgr_fricc paducah">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" onclick="$('.paducah').hide();">&times;</div>
+            <h1 id="popupheader">Country Gospel Church</h1>
+            <h1 id="popuppastor">Pastor:<br />Bro. Dennis Hymer</h1>
+            <h1 id="popupbody">Address:<br />616 Blue Level Rd<br />Bowling Green, KY 42101</h1>
+            <h1 id="popupnumber">Phone Number and Email:<br />exampleemail@gmail.com<br />(555) 555-5555</h1>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        /*this is the pop-up styling for each church*/
+        #popupheader {
+            font-size: 22px;
+            text-decoration: underline;
+            border: thin;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.92;
+            position: relative;
+            background-color: #33383D;
+            color: #C5C5C5;
+        }
+
+        #popuppastor {
+            border: thin;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.92;
+            position: relative;
+            background-color: #33383D;
+            color: #C5C5C5;
+        }
+
+        #popupbody {
+            border: thin;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.92;
+            position: relative;
+            background-color: #33383D;
+            color: #C5C5C5;
+        }
+
+        #popupnumber {
+            border: thin;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.92;
+            position: relative;
+            background-color: #33383D;
+            color: #C5C5C5;
+        }
+
+        .hover_bkgr_fricc {
+            background: rgba(0,0,0,.4);
+            display: none;
+            height: 100%;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 10000;
+        }
+
+            .hover_bkgr_fricc .helper {
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+
+
+
+        .popupCloseButton {
+            background-color: #fff;
+            border: 3px solid #999;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+
+            .popupCloseButton:hover {
+                background-color: #ccc;
+            }
+
+        .trigger_popup_fricc {
+            cursor: pointer;
+            margin: 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        /* STATE DIVS */
+        .tulsa > div {
+            background-image: url(../churchimages/tulsa.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        .skiatook > div {
+            background-image: url(../churchimages/skiatook.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        .okc > div {
+            background-image: url(../churchimages/okc.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        .stillwater > div {
+            background-image: url(../churchimages/stillwater.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        .mcalester > div {
+            background-image: url(../churchimages/mcalester.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        .poteau > div {
+            background-image: url(../churchimages/poteau.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        .marlow > div {
+            background-image: url(../churchimages/marlow.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        .ardmore > div {
+            background-image: url(../churchimages/ardmore.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        .adair > div {
+            background-image: url(../churchimages/adair.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+        /*    KENTUCKY    */
+        .bowlinggreen > div {
+            background-image: url(../churchimages/bowlinggreen.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+        .paducah > div {
+            background-image: url(../churchimages/paducah.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            border: thick;
+            filter: brightness(90%);
+            box-shadow: 10px 10px 60px #555;
+            display: inline-block;
+            height: auto;
+            max-width: 450px;
+            min-height: 400px;
+            vertical-align: middle;
+            width: 60%;
+            position: relative;
+            border-radius: 8px;
+            padding: 15px 5%;
+        }
+
+        #h111 {
+            border-top-right-radius: 13px;
+            border-top-left-radius: 13px;
+            background-color: var(--dark-navy);
+            position: relative;
+            text-align: center;
+            color: var(--footer-text-color);
+            margin: 0;
+        }
+
+        #container {
+            user-select: none; /* Standard */
+            display: block;
+            float: left;
+            width: 100%;
+            height: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 20px;
+        }
+
+            #container .h1 {
+                user-select: none; /* Standard */
+                position: relative;
+                padding: 0;
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            #container .box {
+                border-radius: 15px;
+                float: left;
+                border: 1px solid black;
+                height: 200px;
+                width: 200px;
+                margin: 6px 6px;
+                background-size: cover;
+                background-position-x: center;
+                background-position-y: center;
+                background-repeat: no-repeat;
+                filter: brightness(100%);
+                transform: scale(1);
+                transition: 200ms ease-in-out;
+            }
+
+                #container .box:hover {
+                    filter: brightness(50%);
+                    transform: scale(1.1);
+                    transition: 200ms ease-in-out;
+                }
+            /*PICTURES FOR ICONS*/
+            /*      OKLAHOMA       */
+            #container .tulsab {
+                background-image: url(../churchimages/tulsa.JPG);
+            }
+
+            #container .skiatookb {
+                background-image: url(../churchimages/skiatook.JPG)
+            }
+
+            #container .okcb {
+                background-image: url(../churchimages/okc.JPG);
+            }
+
+            #container .stillwaterb {
+                background-image: url(../churchimages/stillwater.JPG);
+            }
+
+            #container .mcalesterb {
+                background-image: url(../churchimages/mcalester.JPG);
+            }
+
+            #container .poteaub {
+                background-image: url(../churchimages/poteau.JPG);
+            }
+
+            #container .marlowb {
+                background-image: url(../churchimages/marlow.JPG);
+            }
+
+            #container .ardmoreb {
+                background-image: url(../churchimages/ardmore.JPG);
+            }
+
+            #container .adairb {
+                background-image: url(../churchimages/adair.JPG);
+            }
+            /*      KENTUCKY      */
+            #container .bowlinggreenb {
+                background-image: url(../churchimages/bowlinggreen.JPG);
+            }
+            #container .paducahb {
+                background-image: url(../churchimages/paducah.JPG);
+            }
+    </style>
+</body>
+</html>

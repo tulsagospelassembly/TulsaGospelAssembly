@@ -6,6 +6,7 @@ body {
     --light-gray:   #CACACA;
     --medium-gray: #7A7A7A;
     --dark-gray: #33383D;
+    --some-blue: #5c7799;
 
     /* VARIABLES TO CHANGE COLORS ACROSS ALL COMPONETS OF WEBSITE */
     --main-background-color: var(--white-color);
@@ -20,6 +21,9 @@ body {
     --footer-text-color: var(--white-color);
     --btn-background-color: var(--white-color);
     --btn-text-color: var(--dark-navy);
+    --btn-dark-background-color: var(--dark-navy);
+    --btn-hover-dark-background-color: var(--medium-navy);
+    --btn-dark-text-color: var(--white-color);
 
     font-family: "Lato", sans-serif;
     line-height: 1.6;
@@ -172,7 +176,7 @@ body {
 .quad-wrapper {
     grid-area: quad;
     display: grid;
-    grid-template-rows: 500px 500px;
+    grid-template-rows: 500px 600px;
     grid-template-columns: 600px 600px;
 }
 
@@ -215,7 +219,40 @@ body {
     border-image: linear-gradient(to bottom left, var(--quad-gradient-color), 20%, rgba(0,0,0,0)) 1;
 }
 
-.contact-us-quad {}
+.contact-us-quad > form {
+    width: 100%;
+}
+
+.contact-us-quad > form > #contact-form-name,
+.contact-us-quad > form > #contact-form-email,
+.contact-us-quad > form > #contact-form-subject,
+.contact-us-quad > form > #contact-form-message,
+.contact-us-quad > form > #contact-form-submit {
+    font-size: .8rem;
+    width: 80%;
+    margin: 5px 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.contact-us-quad > form > #contact-form-message {
+    height: 100px;
+    resize: none;
+}
+
+.contact-us-quad > form > #contact-form-submit {
+    background-color: var(--btn-dark-background-color);
+    color: var(--btn-dark-text-color);
+    width: 83.5%;
+}
+
+.contact-us-quad > form > #contact-form-submit:hover {
+    background-color: var(--btn-hover-dark-background-color);
+    color: var(--btn-dark-text-color);
+    transform: scale(1.03);
+    transition: .1s linear;
+}
 
 .footer {
     width: 100%;
@@ -268,6 +305,10 @@ body {
 .card-content {
     font-size: 1.15rem;
     padding-left: 50px;
+    animation: cardContentReveal 1.2s;
+}
+
+.card-content2 {
     animation: cardContentReveal 1.2s;
 }
 
@@ -513,7 +554,16 @@ body {
         font-size: 1rem;
         color: var(--navbar-text-color);
     }
-
+    .nav-wrapper .search-bar {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
     .nav-items {
         position: fixed;
         width: 100%;
@@ -562,3 +612,93 @@ body {
         font-size: 45px;
     }
 }
+ /* Reed: I commented this css out here and moved into style tag in directory.html */
+/* #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
+    background-color: var(--dark-gray);
+    font-size: 14px;
+}
+    #myTable th, #myTable td {
+        text-align: left;
+        padding: 14px;
+    }
+    #myTable tr.header, #myTable tr:hover {
+        background-color: #f1f1f1;
+        background-color: var(--medium-navy);
+    }
+
+    #myTable th {
+        background-color: var(--dark-navy);
+        color: var(--white-color);
+    }
+
+#dheader {
+    padding-top: 50px;
+    background-color: var(--medium-gray);
+}
+    
+#h111 {
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+    background-color: var(--dark-navy);
+    position: relative;
+    text-align: center;
+    color: var(--footer-text-color);
+    margin: 0;
+}
+
+#container {
+    user-select: none; /* Standard 
+    display: block;
+    float: left;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 20px;
+}
+    #container .h1 {
+        user-select: none; /* Standard 
+        position: relative;
+        /*bottom: 0;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #container .box {
+        border-radius: 15px;
+        float: left;
+        border: 1px solid black;
+        height: 200px;
+        width: 200px;
+        margin: 6px 6px;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        filter: brightness(100%);
+        transform: scale(1);
+        transition: 200ms ease-in-out;
+    }
+        #container .box:hover {
+            filter: brightness(50%);
+            transform: scale(1.1);
+            transition: 200ms ease-in-out;
+            
+        }
+
+    #container .tulsa {
+        background-image: url(churchimages/tulsa.JPG);
+    }
+    #container .skiatook {
+        background-image: url(churchimages/skiatook.JPG)
+    }
+    #container .okc {
+        background-image: url(churchimages/okc.JPG);
+    }
+*/
